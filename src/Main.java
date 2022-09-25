@@ -35,9 +35,17 @@ public class Main {
         System.out.println(checker.hasWord("Hello"));
         System.out.println(checker.hasWord("amet"));
 
-        PersonComparator cmpr = new PersonComparator(10);
-        Collections.sort(FL, cmpr.compare());
-        System.out.println();
+        List<Person> people = new ArrayList<>();
+        people.add(new Person("Anya","van der Kalmykova", 7));
+        people.add(new Person("Vasily", "Um fur Gavrilov", 9));
+        people.add(new Person("Mark", "Sir Ivanov", 10));
+        people.add(new Person("Sergey", "Mr Petrov", 8));
+
+
+
+//        PersonComparator cmpr = new PersonComparator(5);
+        Collections.sort(people, new PersonComparator(2));
+        System.out.println(people);
 
     }
 
