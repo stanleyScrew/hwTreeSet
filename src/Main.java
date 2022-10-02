@@ -43,9 +43,19 @@ public class Main {
 
 
 //        PersonComparator cmpr = new PersonComparator(5);
-        Collections.sort(people, new PersonComparator(5));
-        System.out.println(people);
+//        Collections.sort(people, new PersonComparator(5));
+//        System.out.println(people);
 
+        Comparator<Person> personComparator = (p1, p2) -> {
+            if (Math.min(p1.getSurname().split(" ", 5).length, 5) != (Math.min(p2.getSurname().split(" ", 5).length, 5))) {
+                return Integer.compare(p1.getSurname().split(" ", 5).length, p2.getSurname().split(" ", 5).length);
+            }
+            return Integer.compare(p1.getAge(), p2.getAge());
+        };
+
+        Collections.sort(people, personComparator);
+        for (Person person : people) {
+            System.out.println(person);
+        }
     }
-
 }
