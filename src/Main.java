@@ -41,8 +41,6 @@ public class Main {
         people.add(new Person("Sergey", "Mr Petrov", 8));
 
 
-
-//        PersonComparator cmpr = new PersonComparator(5);
         Collections.sort(people, new PersonComparator(5));
         System.out.println(people);
 
