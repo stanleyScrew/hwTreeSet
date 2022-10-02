@@ -38,6 +38,8 @@ public class Main {
         people.add(new Person("Anya","van der Kalmykova", 7));
         people.add(new Person("Vasily", "Um fur Gavrilov", 9));
         people.add(new Person("Mark", "Sir Ivanov", 10));
+        people.add(new Person("Marko", "van Basten", 19));
+        people.add(new Person("Luis", "Filipe Madeira Caeiro Figo", 20));
         people.add(new Person("Sergey", "Mr Petrov", 8));
 
 
