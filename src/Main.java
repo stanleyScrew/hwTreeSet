@@ -1,4 +1,5 @@
 import java.util.*;
+import java.util.function.Predicate;
 
 public class Main {
     public static final String TEXT = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum";
@@ -37,13 +38,16 @@ public class Main {
         List<Person> people = new ArrayList<>();
         people.add(new Person("Anya","van der Kalmykova", 7));
         people.add(new Person("Vasily", "Um fur Gavrilov", 9));
+        people.add(new Person("Marko", "van Basten", 19));
         people.add(new Person("Mark", "Sir Ivanov", 10));
         people.add(new Person("Sergey", "Mr Petrov", 8));
+        people.add(new Person("Luis", "Filipe Madeira Caeiro Figo", 23));
 
 
-
-//        PersonComparator cmpr = new PersonComparator(5);
-        Collections.sort(people, new PersonComparator(5));
+//        Collections.sort(people, new PersonComparator(5));
+//        System.out.println(people);
+        Predicate<Person> predicate = person -> person.getAge() < 18;
+        people.removeIf(predicate);
         System.out.println(people);
 
     }
