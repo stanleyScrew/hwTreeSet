@@ -35,8 +35,8 @@ public class Main {
         System.out.println(checker.hasWord("amet"));
 
         List<Person> people = new ArrayList<>();
-        people.add(new Person("Anya","van der Kalmykova", 7));
-        people.add(new Person("Vasily", "Um fur Gavrilov", 9));
+        people.add(new Person("Anya","van der Kalmykova-Sanches", 7));
+        people.add(new Person("Vasily", "Um fur Gavrilov-Ivanov", 9));
         people.add(new Person("Mark", "Sir Ivanov", 10));
         people.add(new Person("Sergey", "Mr Petrov", 8));
 
